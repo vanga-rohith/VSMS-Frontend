@@ -1,38 +1,88 @@
-.App {
+.title{
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 50px;
+  background-color: blue;
   color: white;
 }
+.navbar{
+  height: 30px;
+  background-color: cadetblue;
+  text-align: center;
+  color: black;
+  padding: 10px;
+}
+label{
+  color: black;
+}
+.link{
+  padding-right: 50px;
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+  font-size: x-large;
+}
+.login{
+  height: max-content;
+  width: 25%;
+  border: 0.5px solid black;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-left: 36%;
+  padding-top: 30px;
+  text-align: center;
+}
+.login button{
 
-.App-link {
-  color: #61dafb;
+
+appearance: none;
+background-color: #FFFFFF;
+border-radius: 40em;
+border-style: none;
+box-shadow: #ADCFFF 0 -12px 6px inset;
+box-sizing: border-box;
+color: #000000;
+cursor: pointer;
+display: inline-block;
+font-family: -apple-system,sans-serif;
+font-size: 1.2rem;
+font-weight: 700;
+letter-spacing: -.24px;
+margin: 0;
+outline: none;
+padding: 1rem 1.3rem;
+quotes: auto;
+text-align: center;
+text-decoration: none;
+transition: all .15s;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login button:hover {
+background-color: #FFC229;
+box-shadow: #FF6314 0 -6px 8px inset;
+transform: scale(1.125);
+}
+
+.login button:active {
+transform: scale(1.025);
+}
+
+@media (min-width: 768px) {
+.login button {
+  font-size: 1.5rem;
+  padding: .75rem 2rem;
+}
+}
+
+.signup{
+  height: 380px;
+  width: 30%;
+  border: 0.5px solid black;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-left: 34%;
+  padding-top:  20px;
+  text-align: center;
 }
