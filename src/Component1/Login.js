@@ -1,15 +1,15 @@
 import axios from "axios";
-import {  createContext, useState } from "react";
+import {   useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { logincontext } from "../Component/Home";
 
 
-export let logincontext = createContext();
 function Login(){
 
     let [uname, setUname] = useState('');
     let [pwd, setPwd] = useState('');
     let navigateitem = useNavigate();
-    let [[isAutenticated,setIsAutenticated],[token,setToken]] = createContext(logincontext);
+    let [[isAutenticated,setIsAutenticated],[token,setToken]] = useContext(logincontext);
 
     
 
@@ -23,12 +23,8 @@ function Login(){
         axios.post(loginUrl, credentials)
             .then((resp) => {
                 if (resp.status === 200){
-                    console.log(resp.status);
-                    console.log(resp.data['token']);
                     setIsAutenticated(true);
                     setToken(resp.data['token']);
-                    console.log(token);
-                    console.log(isAutenticated);
                     navigateitem('/Body');
             }
             if (resp.status === 400){
@@ -60,8 +56,6 @@ function Login(){
             <Link to='/Forgot'>Forgot Password?</Link>
             <br/><br/>
         </div>
-
-
         </div>
                
     );

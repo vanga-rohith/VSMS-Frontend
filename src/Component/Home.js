@@ -7,8 +7,9 @@ import ForgotPassword from "../Component1/ForgotPassword";
 import StudentLogin from "../Component1/StudentLogin";
 import Body from "../Component2/Body";
 import NavBar from "./NavBar";
-import Logout from "../Component1/Logout";
+
 import { createContext, useState } from "react";
+import StudentCreationForm from "../Component1/Stud_Create.js";
 
 export let logincontext = createContext();
 
@@ -24,6 +25,7 @@ function Home(){
         <div>
             <NavBar />
             <Routes>
+                <Route path="/" element={<Home/>}/>
                 <Route path="/About" element={<About />} />
                 <Route path="/Contact" element={<Contact />} />
                 <Route path="/Login" element={<Login />} />
@@ -31,7 +33,7 @@ function Home(){
                 <Route path="/Body" element={<Body/>}/>     
                 <Route path='/Forgot' element={<ForgotPassword />}/> 
                 <Route path='/Student' element={<StudentLogin/>}/>
-                <Route path='/Logout' element={<Logout />}/>             
+                <Route path='/StudentRegister' element={<StudentCreationForm/>}/>            
             </Routes>
 
         </div>
